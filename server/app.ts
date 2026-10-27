@@ -254,20 +254,18 @@ export function createApp(store: Store, engine: Engine) {
             : (err as { status?: number })?.status === 413
               ? 413
               : 400;
-    res
-      .status(status)
-      .json({
-        error:
-          message === "AUTH"
-            ? "Faça login para continuar"
-            : message === "FORBIDDEN"
-              ? "Acesso não autorizado"
-              : err instanceof z.ZodError
-                ? "Dados inválidos; confira os campos"
-                : status === 413
-                  ? "Mensagem muito grande"
-                  : message,
-      });
+    res.status(status).json({
+      error:
+        message === "AUTH"
+          ? "Faça login para continuar"
+          : message === "FORBIDDEN"
+            ? "Acesso não autorizado"
+            : err instanceof z.ZodError
+              ? "Dados inválidos; confira os campos"
+              : status === 413
+                ? "Mensagem muito grande"
+                : message,
+    });
   });
   return app;
 }
