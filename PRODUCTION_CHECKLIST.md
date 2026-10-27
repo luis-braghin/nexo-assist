@@ -9,7 +9,8 @@ Tier: `client-demo`. Decisão: **aprovado para avaliação local com ressalvas; 
 - [x] Confirmação, idempotência e falhas após gravação verificadas.
 - [x] Estado humano/histórico persistem após reabrir o banco em teste.
 - [x] `.env.example`, `.gitignore` e instruções locais presentes.
-- [ ] Revisão visual da interface no navegador.
+- [x] Revisão visual e fluxos principais no Chrome desktop (login, prévia, confirmação, transferência, assumir, responder e devolver).
+- [ ] Responsividade móvel e acessibilidade completa.
 - [ ] Inferência em provedor externo com chave real e avaliação de qualidade.
 - [ ] Testes ponta a ponta da interface e acessibilidade.
 - [ ] SSO e autenticação adequada para produção.

@@ -105,11 +105,16 @@ O serviço de chamados é uma classe separada do agente, com interface própria 
 npm run typecheck
 npm test
 npm run build
+npm run format:check
 ```
 
 23 testes automatizados passam: privacidade, confirmação, expiração, versão concorrente, idempotência, falhas antes/depois do commit, duplicidade/reabertura, prazos úteis, regras de VPN, coleta de contexto, transferência, descarte de inferência após takeover, persistência em reinício, limite de mensagens, autorização HTTP, origem e schema do provedor. Build e TypeScript estrito também passaram. Não há script de lint separado.
 
-A revisão visual no navegador ainda está pendente nesta versão. Os testes são verificações de políticas/API e do adaptador do provedor; não equivalem a uma suíte ponta a ponta de interface. Sem inferência externa ou deploy verificados.
+Revisão manual no Chrome desktop realizada: login, prévia com decisão expandida, confirmação/criação de chamado, transferência, entrada como analista, consulta de contexto, tomada de controle, resposta humana e devolução ao agente. As capturas abaixo usam somente dados fictícios. Responsividade móvel e acessibilidade completa não foram homologadas; os testes automatizados de políticas/API não equivalem a uma suíte ponta a ponta de interface. Sem inferência externa ou deploy verificados.
+
+![Login com perfis fictícios](docs/screenshots/login.png)
+![Prévia e decisão observável](docs/screenshots/previa.png)
+![Console do analista e contexto do funcionário](docs/screenshots/console.png)
 
 ## Uso de IA e próximos passos
 
